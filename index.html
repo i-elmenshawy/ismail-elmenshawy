@@ -59,8 +59,9 @@
             <div class="hidden lg:flex items-center space-x-10 text-xs uppercase tracking-widest font-semibold text-slate-600">
                 <a href="#about" class="hover:text-gold-600 transition-colors duration-300">Overview</a>
                 <a href="#experience" class="hover:text-gold-600 transition-colors duration-300">Experience</a>
+                <a href="#sectors" class="hover:text-gold-600 transition-colors duration-300">Operations</a>
                 <a href="#skills" class="hover:text-gold-600 transition-colors duration-300">Expertise</a>
-                <a href="#clients" class="hover:text-gold-600 transition-colors duration-300">Portfolio & Brands</a>
+                <a href="#clients" class="hover:text-gold-600 transition-colors duration-300">Brands</a>
                 <a href="#documents" class="hover:text-gold-600 transition-colors duration-300">Credentials</a>
                 <a href="#contact" class="px-5 py-2.5 bg-obsidian-900 text-white rounded hover:bg-gold-600 transition-colors duration-300">Contact</a>
             </div>
@@ -75,8 +76,9 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gold-100 px-8 py-6 space-y-4 shadow-lg text-xs uppercase tracking-wider font-semibold">
             <a href="#about" class="block text-slate-600 hover:text-gold-600">Overview</a>
             <a href="#experience" class="block text-slate-600 hover:text-gold-600">Experience</a>
+            <a href="#sectors" class="block text-slate-600 hover:text-gold-600">Operations</a>
             <a href="#skills" class="block text-slate-600 hover:text-gold-600">Expertise</a>
-            <a href="#clients" class="block text-slate-600 hover:text-gold-600">Portfolio & Brands</a>
+            <a href="#clients" class="block text-slate-600 hover:text-gold-600">Brands</a>
             <a href="#documents" class="block text-slate-600 hover:text-gold-600">Credentials</a>
             <a href="#contact" class="block text-gold-600 font-bold">Contact</a>
         </div>
@@ -124,25 +126,42 @@
         </div>
     </header>
 
-    <!-- OVERVIEW / ABOUT -->
+    <!-- OVERVIEW / ABOUT WITH PORTRAIT FRAME -->
     <section id="about" class="py-28 bg-white border-y border-gold-100">
         <div class="max-w-7xl mx-auto px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                <div class="lg:col-span-4">
-                    <h2 class="text-xs font-bold uppercase tracking-[0.25em] text-gold-600 mb-3">Executive Summary</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                
+                <!-- Luxury Portrait Frame -->
+                <div class="lg:col-span-5 relative flex justify-center lg:justify-start">
+                    <!-- Offset back border -->
+                    <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold-500 rounded hidden sm:block pointer-events-none transition-all duration-500"></div>
+                    <!-- Frame Container -->
+                    <div class="relative w-full aspect-[4/5] max-w-sm overflow-hidden rounded shadow-2xl border border-gold-200">
+                        <!-- Portrait Image (To be uploaded by user) -->
+                        <img src="images/ismail-portrait.jpg" alt="Ismail El-Menshawy" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700 ease-out cursor-pointer">
+                        <!-- Dark gradient overlay at the base of picture -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                </div>
+
+                <!-- Biography Details -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h2 class="text-xs font-bold uppercase tracking-[0.25em] text-gold-600 mb-1">Executive Summary</h2>
                     <h3 class="text-3xl md:text-4xl font-serif font-bold text-obsidian-900">A Heritage of Operational Distinction</h3>
+                    
+                    <div class="text-slate-600 text-base leading-relaxed font-light space-y-6">
+                        <p>
+                            With a career shaped by managing critical logistics and financial auditing across the elite hospitality sector (including prestigious brands in the UAE and Egypt), I approach supply chain management with strict financial precision.
+                        </p>
+                        <p class="border-l-2 border-gold-500 pl-6 my-8 py-1 italic font-serif text-obsidian-900 text-lg">
+                            "Operational excellence is not merely an objective; it is the natural consequence of meticulous planning, verified financial integrity, and strict quality compliance."
+                        </p>
+                        <p>
+                            My background enables me to navigate complex cross-border trade protocols, implement advanced ERP systems, and streamline multi-property commercial networks, ensuring luxury standards and cost-efficiency exist in unison.
+                        </p>
+                    </div>
                 </div>
-                <div class="lg:col-span-8 space-y-6 text-slate-600 text-base leading-relaxed font-light">
-                    <p>
-                        With a career shaped by managing critical logistics and financial auditing across the elite hospitality sector (including prestigious brands in the UAE and Egypt), I approach supply chain management with strict financial precision.
-                    </p>
-                    <p class="border-l-2 border-gold-500 pl-6 my-8 py-1 italic font-serif text-obsidian-900 text-lg">
-                        "Operational excellence is not merely an objective; it is the natural consequence of meticulous planning, verified financial integrity, and strict quality compliance."
-                    </p>
-                    <p>
-                        My background enables me to navigate complex cross-border trade protocols, implement advanced ERP systems, and streamline multi-property commercial networks, ensuring luxury standards and cost-efficiency exist in unison.
-                    </p>
-                </div>
+
             </div>
         </div>
     </section>
@@ -210,8 +229,64 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: OPERATIONAL SPHERES GALLERY -->
+    <section id="sectors" class="py-28 bg-white border-b border-gold-100">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-xs font-bold uppercase tracking-[0.25em] text-gold-600 mb-3">Operational Footprint</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-obsidian-900">Expertise Across High-End Industries</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Sector 1: Hospitality -->
+                <div class="relative group h-96 rounded overflow-hidden shadow-md cursor-pointer border border-gold-100">
+                    <!-- High-end background image (To be uploaded by user) -->
+                    <img src="images/sector-hospitality.jpg" alt="Luxury Hospitality" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                    <!-- Satin Dark overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/60 to-transparent opacity-85"></div>
+                    <!-- Content over image -->
+                    <div class="absolute bottom-0 left-0 p-8 space-y-3 z-10">
+                        <span class="text-[10px] uppercase tracking-widest text-gold-500 font-bold">Five-Star Lodging & Food Services</span>
+                        <h4 class="text-2xl font-serif font-bold text-white">Prestige Hospitality</h4>
+                        <p class="text-xs text-slate-300 font-light leading-relaxed">Centralizing multi-property supply standards, managing fragile logistics, and ensuring high culinary quality compliance.</p>
+                    </div>
+                </div>
+
+                <!-- Sector 2: FMCG / Warehousing -->
+                <div class="relative group h-96 rounded overflow-hidden shadow-md cursor-pointer border border-gold-100">
+                    <!-- High-end background image (To be uploaded by user) -->
+                    <img src="images/sector-fmcg.jpg" alt="FMCG Sourcing" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                    <!-- Satin Dark overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/60 to-transparent opacity-85"></div>
+                    <!-- Content over image -->
+                    <div class="absolute bottom-0 left-0 p-8 space-y-3 z-10">
+                        <span class="text-[10px] uppercase tracking-widest text-gold-500 font-bold">Fast-Moving Consumer Goods</span>
+                        <h4 class="text-2xl font-serif font-bold text-white">Industrial & FMCG Sourcing</h4>
+                        <p class="text-xs text-slate-300 font-light leading-relaxed">Streamlining mass inventory turnovers, establishing continuous procurement schedules, and managing supply risk.</p>
+                    </div>
+                </div>
+
+                <!-- Sector 3: International Trade -->
+                <div class="relative group h-96 rounded overflow-hidden shadow-md cursor-pointer border border-gold-100">
+                    <!-- High-end background image (To be uploaded by user) -->
+                    <img src="images/sector-trade.jpg" alt="International Trade" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                    <!-- Satin Dark overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/60 to-transparent opacity-85"></div>
+                    <!-- Content over image -->
+                    <div class="absolute bottom-0 left-0 p-8 space-y-3 z-10">
+                        <span class="text-[10px] uppercase tracking-widest text-gold-500 font-bold">Cross-Border Compliance</span>
+                        <h4 class="text-2xl font-serif font-bold text-white">Global Import & Export</h4>
+                        <p class="text-xs text-slate-300 font-light leading-relaxed">Navigating rigorous custom protocols, trade regulations, and establishing strategic regional corridors.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- PORTFOLIO / CLIENTS SECTION -->
-    <section id="clients" class="py-28 bg-white border-y border-gold-100 overflow-hidden">
+    <section id="clients" class="py-28 bg-[#fcfbfa] overflow-hidden">
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-xs font-bold uppercase tracking-[0.25em] text-gold-600 mb-3">Portfolio & Associations</h2>
@@ -227,19 +302,19 @@
                         <img src="images/clients/Holiday International - logo.png" alt="Holiday International" class="h-12 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer">
                     </div>
                     <div class="marquee-logo">
+                        <img src="images/clients/Oceanic Hotel - logo.png" alt="Oceanic Hotel" class="h-12 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    </div>
+                    <div class="marquee-logo">
                         <img src="images/clients/Radisson Blu - logo.jpg" alt="Radisson Blu" class="h-12 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer">
                     </div>
                     <div class="marquee-logo">
                         <img src="images/clients/Rotana Hotel - logo.png" alt="Rotana Hotel" class="h-12 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer">
                     </div>
                     <div class="marquee-logo">
-                        <img src="images/clients/Oceanic Hotel - logo.png" alt="Oceanic Hotel" class="h-12 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                        <img src="images/clients/Lords Hotel - logo.jpg" alt="Lords Hotel" class="h-12 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer">
                     </div>
                     <div class="marquee-logo">
-                        <img src="images/client5.png" alt="Client 5" class="h-12 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer">
-                    </div>
-                    <div class="marquee-logo">
-                        <img src="images/client6.png" alt="Client 6" class="h-12 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                        <img src="images/clients/al_hayat_group_hotels_logo.jpg" alt="al_hayat_group_hotels" class="h-12 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer">
                     </div>
 
                     <!-- Duplicated Logos Set 2 (To ensure seamless continuous scrolling loop) -->
