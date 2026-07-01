@@ -1,0 +1,88 @@
+/* --- Core Base Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fcfbfa;
+}
+
+h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* --- Golden Timeline Track --- */
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: #e9d6b2; /* Subtle Gold Line */
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .timeline-line::before {
+        left: 20px;
+    }
+}
+
+/* --- Infinite Marquee Animation (Hardware Accelerated) --- */
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Creating seamless masks on both sides of the carousel */
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #fcfbfa 10%, transparent);
+}
+
+.marquee-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #fcfbfa 10%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-marquee 25s linear infinite;
+}
+
+.marquee-logo {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes scroll-marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* Pause the scrolling animation when hovering over logos */
+.marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* --- Smooth Navigation Transition --- */
+nav {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
