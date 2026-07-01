@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismail El-Menshawy | Executive Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0f172a', /* Deep Slate Navy */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #e2e8f0;
+            transform: translateX(-50%);
+        }
+        @media (max-width: 768px) {
+            .timeline-line::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-xl font-extrabold tracking-tight text-brand-900">
+                ISMAIL <span class="text-brand-600">EL-MENSHAWY</span>
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <a href="#about" class="hover:text-brand-600 transition">About</a>
+                <a href="#experience" class="hover:text-brand-600 transition">Experience</a>
+                <a href="#skills" class="hover:text-brand-600 transition">Expertise</a>
+                <a href="#documents" class="hover:text-brand-600 transition">Credentials</a>
+                <a href="#contact" class="hover:text-brand-600 transition">Contact</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-brand-900 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3 shadow-lg">
+            <a href="#about" class="block font-medium text-slate-600 hover:text-brand-600">About</a>
+            <a href="#experience" class="block font-medium text-slate-600 hover:text-brand-600">Experience</a>
+            <a href="#skills" class="block font-medium text-slate-600 hover:text-brand-600">Expertise</a>
+            <a href="#documents" class="block font-medium text-slate-600 hover:text-brand-600">Credentials</a>
+            <a href="#contact" class="block font-medium text-slate-600 hover:text-brand-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="pt-32 pb-20 md:py-40 bg-gradient-to-b from-brand-50 via-white to-slate-50">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-8 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100 text-brand-800 text-sm font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span> Executive Supply Chain & Operations Leader
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-brand-900 leading-tight">
+                    Optimizing Global Supply Chains <br class="hidden md:inline">For Sustainable Growth.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed">
+                    Over 25 years of progressive leadership experience across Egypt and the UAE, specializing in strategic procurement, global sourcing, cost optimization, and commercial operations within FMCG, Hospitality, and Manufacturing.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact" class="px-8 py-3.5 bg-brand-600 text-white font-semibold rounded-lg shadow-lg shadow-brand-600/20 hover:bg-brand-700 hover:shadow-none transition duration-300">
+                        Get In Touch
+                    </a>
+                    <a href="#documents" class="px-8 py-3.5 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg hover:bg-slate-50 transition duration-300 flex items-center gap-2">
+                        View Credentials <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Quick Stats -->
+            <div class="lg:col-span-4 grid grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
+                    <div class="text-4xl font-extrabold text-brand-600">25+</div>
+                    <div class="text-xs font-semibold text-slate-500 mt-2 uppercase tracking-wider">Years Experience</div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
+                    <div class="text-4xl font-extrabold text-brand-600">2</div>
+                    <div class="text-xs font-semibold text-slate-500 mt-2 uppercase tracking-wider">Major Markets (EG/UAE)</div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center col-span-2">
+                    <div class="text-lg font-bold text-brand-900">EMBA Graduate</div>
+                    <div class="text-xs font-semibold text-slate-500 mt-1">Swiss Business School (2018)</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">Executive Summary</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-brand-900 mb-6">Strategic Vision Driven By Financial Discipline</h3>
+                <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                    With an Executive MBA and a robust foundation in financial cost control, I bridge the gap between financial targets and operational execution. Over my career, I have structured end-to-end supply chains, driven continuous improvement, and implemented scalable procurement solutions.
+                </p>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    Currently serving as Founder & CEO while simultaneously directing strategic operations, my focus is on digital transformation, robust vendor management, and building resilient trade networks.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL TIMELINE / EXPERIENCE -->
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">Professional Journey</h2>
+                <h3 class="text-3xl font-extrabold text-brand-900">Over Two Decades of Professional Leadership</h3>
+            </div>
+
+            <!-- Timeline Structure -->
+            <div class="relative timeline-line">
+                
+                <!-- Card 1 -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-12 group">
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-brand-600 border-4 border-white z-10 hidden md:block"></div>
+                    <div class="w-full md:w-[45%] bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                        <span class="text-xs font-bold text-brand-600">2026 - Present</span>
+                        <h4 class="text-xl font-bold text-brand-900 mt-1">CEO & Founder</h4>
+                        <p class="text-sm font-semibold text-slate-500 mb-4">Al Massriya Al Emaratiya for Commercial Agencies, Import & Export</p>
+                        <p class="text-slate-600 text-sm">Founded and leading strategic operations for import, export, and regional commercial trade networks.</p>
+                    </div>
+                    <div class="w-full md:w-[45%] hidden md:block"></div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-12 group">
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-brand-600 border-4 border-white z-10 hidden md:block"></div>
+                    <div class="w-full md:w-[45%] hidden md:block"></div>
+                    <div class="w-full md:w-[45%] bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                        <span class="text-xs font-bold text-brand-600">2024 - Present</span>
+                        <h4 class="text-xl font-bold text-brand-900 mt-1">Supply Chain Manager</h4>
+                        <p class="text-sm font-semibold text-slate-500 mb-4">Sweet Factories & Food Industries (SWIFAX)</p>
+                        <p class="text-slate-600 text-sm">Overseeing end-to-end supply chains across planning, inventory, warehousing, and food-production procurement.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-12 group">
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-brand-600 border-4 border-white z-10 hidden md:block"></div>
+                    <div class="w-full md:w-[45%] bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                        <span class="text-xs font-bold text-brand-600">2021 - 2024</span>
+                        <h4 class="text-xl font-bold text-brand-900 mt-1">Supply Chain Professional Manager</h4>
+                        <p class="text-sm font-semibold text-slate-500 mb-4">Al Shaheen for Trading & Industry</p>
+                        <p class="text-slate-600 text-sm">Optimized warehouse management, increased material availability, and developed strategic commercial agreements.</p>
+                    </div>
+                    <div class="w-full md:w-[45%] hidden md:block"></div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-12 group">
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-brand-600 border-4 border-white z-10 hidden md:block"></div>
+                    <div class="w-full md:w-[45%] hidden md:block"></div>
+                    <div class="w-full md:w-[45%] bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                        <span class="text-xs font-bold text-brand-600">2011 - 2017</span>
+                        <h4 class="text-xl font-bold text-brand-900 mt-1">Cluster Supply Chain Professional Manager</h4>
+                        <p class="text-sm font-semibold text-slate-500 mb-4">Sharjah National Hotels (UAE)</p>
+                        <p class="text-slate-600 text-sm">Managed complete multi-property hospitality supply operations, standardizing procurement and negotiating high-value contracts.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">Core Competencies</h2>
+                <h3 class="text-3xl font-extrabold text-brand-900">Functional & Technical Expertise</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-900 mb-4">Supply Chain & Sourcing</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> End-to-End Supply Chain</li>
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Strategic Sourcing & Logistics</li>
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Demand & Supply Planning</li>
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Vendor Relationship (SRM)</li>
+                    </ul>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-900 mb-4">Cost Control & Governance</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Cost & Budget Optimization</li>
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Contract Negotiations</li>
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Quality Assurance & Audit</li>
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Business Risk Management</li>
+                    </ul>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-900 mb-4">Technical Systems</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Supply Chain ERP Solutions</li>
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Inventory Control Systems</li>
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Hospitality Systems (Micros, Jana)</li>
+                        <li><i class="fa-solid fa-check text-brand-600 mr-2"></i> Data Analytics & KPI Dashboards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDENTIALS & DOCUMENT PLACEHOLDERS -->
+    <section id="documents" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">Qualifications & Certifications</h2>
+                <h3 class="text-3xl font-extrabold text-brand-900">Academic & Professional Credentials</h3>
+                <p class="text-sm text-slate-500 mt-2">Click to view certificates (or direct placeholders to customize on GitHub)</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Document 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-600 transition">
+                    <div>
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h4 class="font-bold text-brand-900 text-lg">Executive MBA</h4>
+                        <p class="text-xs text-slate-500 mt-1">Swiss Business School - 2018</p>
+                    </div>
+                    <!-- Replace '#' with path to your uploaded PDF/Image on GitHub, e.g., 'files/emba-certificate.pdf' -->
+                    <a href="#" target="_blank" class="mt-6 text-sm font-semibold text-brand-600 hover:text-brand-800 flex items-center gap-2">
+                        View Certificate <i class="fa-solid fa-external-link text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Document 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-600 transition">
+                    <div>
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-certificate"></i></div>
+                        <h4 class="font-bold text-brand-900 text-lg">ISO 9001 Lead Auditor</h4>
+                        <p class="text-xs text-slate-500 mt-1">Quality Management System Certification</p>
+                    </div>
+                    <a href="#" target="_blank" class="mt-6 text-sm font-semibold text-brand-600 hover:text-brand-800 flex items-center gap-2">
+                        View Certificate <i class="fa-solid fa-external-link text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Document 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-600 transition">
+                    <div>
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h4 class="font-bold text-brand-900 text-lg">HACCP Certification</h4>
+                        <p class="text-xs text-slate-500 mt-1">Hazard Analysis Critical Control Point</p>
+                    </div>
+                    <a href="#" target="_blank" class="mt-6 text-sm font-semibold text-brand-600 hover:text-brand-800 flex items-center gap-2">
+                        View Certificate <i class="fa-solid fa-external-link text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Document 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-600 transition">
+                    <div>
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-file-pdf"></i></div>
+                        <h4 class="font-bold text-brand-900 text-lg">Comprehensive CV</h4>
+                        <p class="text-xs text-slate-500 mt-1">Detailed Professional Resume</p>
+                    </div>
+                    <a href="#" target="_blank" class="mt-6 text-sm font-semibold text-brand-600 hover:text-brand-800 flex items-center gap-2">
+                        Download CV <i class="fa-solid fa-download text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-6">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600">Contact Information</h2>
+                    <h3 class="text-3xl font-extrabold text-brand-900">Let's Connect</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        I am open to discussions on regional leadership opportunities, joint ventures, global supply chain consultations, or strategic procurement development.
+                    </p>
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <span class="text-slate-700 font-medium">i.elmenshawy@outlook.com</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span class="text-slate-700 font-medium">+20 101 176 6232</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span class="text-slate-700 font-medium">10th of Ramadan City, Egypt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Placeholder -->
+                <div class="lg:col-span-7 bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Your Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-brand-600 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-brand-600 text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Subject</label>
+                            <input type="text" name="subject" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-brand-600 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Message</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-brand-600 text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 bg-brand-900 text-white font-semibold rounded-lg hover:bg-brand-800 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-sm">
+                &copy; 2026 Ismail El-Menshawy. All rights reserved.
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://www.linkedin.com/in/ismail-elmenshawy/" target="_blank" class="hover:text-white transition text-lg">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:i.elmenshawy@outlook.com" class="hover:text-white transition text-lg">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR INTERACTION -->
+    <script>
+        // Responsive Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        const links = mobileMenu.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
